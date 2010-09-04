@@ -1,11 +1,12 @@
-var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" checked="checked" type="checkbox"/> Include signature with this post.<input name="show_edit" type="checkbox"/> Show that you edited this post.</div>';
+//Q-Edit v1.0 - By Karkuta. Do not remove this.
+var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" type="checkbox"/> Include signature with this post.<input name="show_edit" type="checkbox"/> Show that you edited this post.</div>';
 var getposturl, d, postid, ipost, msg, qimg;
 if (!qimg){
 qimg ="http://zb-query.googlecode.com/svn/qedit/q_edit.png";
 }
 
 $("body").append('<div id="storage" style="display:none;"></div>');
-$("img[alt=Edit Post]").each(function() {
+$("img[alt~=Edit]").each(function() {
 $(this).parents(".left").next().prepend("<img class='qedit' src='"+qimg+"' alt='QuickEdit' style='cursor:pointer;'/> ")
 });
 $(".qedit").click(function () {
@@ -20,6 +21,7 @@ $(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;" disabled="
 $("textarea#c_post-text").after(getbuttons);
 $.get(getposturl, function(data){
 d = data;
+$("input[name=sig]").attr("checked", $("input[name=sig]",d).attr("checked"));
 $("textarea#c_post-text").val($("textarea#c_post-text",data).val()).attr("disabled",false).css('background', '');
 window.onbeforeunload = function () {
 return "You currently have a QuickEdit box open. If you continue off the page, your browser will not save your edit."
@@ -53,7 +55,6 @@ var msg = $('textarea#c_post-text').val();
          alert('You must enter a message to post!');
          return false;
      }
-//$("div#editbuttons").remove();
 $("textarea#c_post-text").attr("disabled","disabled").css('background', '#D9D9D9').val("Saving, please wait...");
 $.post(main_url + "post/",{"mode":$("input[name=mode]",d).val(),"type":$("input[name=type]",d).val(),"f":$("input[name=f]",d).val(),"t":$("input[name=t]",d).val(),"xc":$("input[name=xc]",d).val(),"qhash":$("input[name=qhash]",d).val(),"sd":$("input[name=sd]",d).val(),"p":$("input[name=p]",d).val(),"ast":$("input[name=ast]",d).val(),"pg":$("input[name=pg]",d).val(),"x":$("input[name=x]",d).val(),"sig":check(dosig),"emo":"1","show_edit":check(showedit),"post":msg,"title":$("input[name=title]",d).val(),"description":$("input[name=description]",d).val(),"tags":$("input[name=tags]",d).val()},function(e) {
 var test = $("table#error_box thead tr th",e).html();
