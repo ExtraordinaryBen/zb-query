@@ -21,7 +21,8 @@ $(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;" disabled="
 $("textarea#c_post-text").after(getbuttons);
 $.get(getposturl, function(data){
 d = data;
-var ckshed = $("input[name=show_edit]").val();
+var ckshed = $("input[name=show_edit]",d).val();
+alert(ckshed);
 if (ckshed){
 $("div#editbuttons").append('<input name="show_edit" checked="checked" type="checkbox"/> Show that you edited this post.');
 }
