@@ -22,7 +22,6 @@ $("textarea#c_post-text").after(getbuttons);
 $.get(getposturl, function(data){
 d = data;
 var ckshed = $("input[name=show_edit]",d).val();
-alert(ckshed);
 if (ckshed){
 $("div#editbuttons").append('<input name="show_edit" checked="checked" type="checkbox"/> Show that you edited this post.');
 }
