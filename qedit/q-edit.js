@@ -1,5 +1,5 @@
 //Q-Edit v1.0 - By Karkuta. Do not remove this.
-var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" type="checkbox"/> Include signature with this post.<input name="show_edit" type="checkbox"/> Show that you edited this post.</div>';
+var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" type="checkbox"/> Include signature with this post.</div>';
 var getposturl, d, postid, ipost, msg, qimg;
 if (!qimg){
 qimg ="http://zb-query.googlecode.com/svn/qedit/q_edit.png";
@@ -21,6 +21,10 @@ $(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;" disabled="
 $("textarea#c_post-text").after(getbuttons);
 $.get(getposturl, function(data){
 d = data;
+var ckshed = $("input[name=show_edit]").val();
+if (ckshed){
+$("div#editbuttons").append('<input name="show_edit" checked="checked" type="checkbox"/> Show that you edited this post.');
+}
 $("input[name=sig]").attr("checked", $("input[name=sig]",d).attr("checked"));
 $("textarea#c_post-text").val($("textarea#c_post-text",data).val()).attr("disabled",false).css('background', '');
 window.onbeforeunload = function () {
