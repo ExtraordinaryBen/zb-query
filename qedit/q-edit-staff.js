@@ -4,8 +4,7 @@ var getposturl, d, postid, ipost, msg, qimg;
 if (!qimg){
 qimg ="http://zb-query.googlecode.com/svn/qedit/q_edit.png";
 }
-var staff = $("select[name=modopts_menu]");
-if (staff[0]) {
+if (($("#menu_rcp").length)||($("#menu_acp").length)) {
 $("body").append('<div id="storage" style="display:none;"></div>');
 $("img[alt~=Edit]").each(function() {
 $(this).parents(".left").next().prepend("<img class='qedit' src='"+qimg+"' alt='QuickEdit' style='cursor:pointer;'/> ")
