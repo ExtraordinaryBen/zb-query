@@ -18,7 +18,7 @@ return false;
 ipost =  $(this).parents("tr").prev().prev().children(".c_post");
 $("div#storage").html($(ipost).html());
 getposturl = $(this).parent().prev().children("a:first-child").attr("href");
-$(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;" disabled="disabled" tabindex="3" name="post" rows="20" cols="50">Please wait as the post loads...</textarea>');
+$(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;color:#636363;" disabled="disabled" tabindex="3" name="post" rows="20" cols="50">Please wait as the post loads...</textarea>');
 $("textarea#c_post-text").after(getbuttons);
 $.get(getposturl, function(data){
 d = data;
@@ -60,7 +60,7 @@ var msg = $('textarea#c_post-text').val();
          alert('You must enter a message to post!');
          return false;
      }
-$("textarea#c_post-text").attr("disabled","disabled").css('background', '#D9D9D9').css('color', '#A3A3A3').val("Saving, please wait...");
+$("textarea#c_post-text").attr("disabled","disabled").css('background', '#D9D9D9').css('color', '#636363').val("Saving, please wait...");
 $.post(main_url + "post/",{"mode":$("input[name=mode]",d).val(),"type":$("input[name=type]",d).val(),"f":$("input[name=f]",d).val(),"t":$("input[name=t]",d).val(),"xc":$("input[name=xc]",d).val(),"qhash":$("input[name=qhash]",d).val(),"sd":$("input[name=sd]",d).val(),"p":$("input[name=p]",d).val(),"ast":$("input[name=ast]",d).val(),"pg":$("input[name=pg]",d).val(),"x":$("input[name=x]",d).val(),"sig":check(dosig),"emo":"1","show_edit":check(showedit),"post":msg,"title":$("input[name=title]",d).val(),"description":$("input[name=description]",d).val(),"tags":$("input[name=tags]",d).val()},function(e) {
 var test = $("table#error_box thead tr th",e).html();
 if(test){
