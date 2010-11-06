@@ -60,7 +60,7 @@ var msg = $('textarea#c_post-text').val();
          alert('You must enter a message to post!');
          return false;
      }
-$("textarea#c_post-text").attr("disabled","disabled").css('background', '#D9D9D9').val("Saving, please wait...");
+$("textarea#c_post-text").attr("disabled","disabled").css('background', '#D9D9D9').css('color', '#A3A3A3').val("Saving, please wait...");
 $.post(main_url + "post/",{"mode":$("input[name=mode]",d).val(),"type":$("input[name=type]",d).val(),"f":$("input[name=f]",d).val(),"t":$("input[name=t]",d).val(),"xc":$("input[name=xc]",d).val(),"qhash":$("input[name=qhash]",d).val(),"sd":$("input[name=sd]",d).val(),"p":$("input[name=p]",d).val(),"ast":$("input[name=ast]",d).val(),"pg":$("input[name=pg]",d).val(),"x":$("input[name=x]",d).val(),"sig":check(dosig),"emo":"1","show_edit":check(showedit),"post":msg,"title":$("input[name=title]",d).val(),"description":$("input[name=description]",d).val(),"tags":$("input[name=tags]",d).val()},function(e) {
 var test = $("table#error_box thead tr th",e).html();
 if(test){
