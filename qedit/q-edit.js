@@ -26,7 +26,7 @@ if (ckshed){
 $("div#editbuttons").append('<input name="show_edit" checked="checked" type="checkbox"/> Show that you edited this post.');
 }
 $("input[name=sig]").attr("checked", $("input[name=sig]",d).attr("checked"));
-$("textarea#c_post-text").val($("textarea#c_post-text",data).val()).attr("disabled",false).css('background', '');
+$("textarea#c_post-text").val($("textarea#c_post-text",data).val()).attr("disabled",false).css('background', '').css('color', '');
 window.onbeforeunload = function () {
 return "You currently have a QuickEdit box open. If you continue off the page, your browser will not save your edit."
 };
