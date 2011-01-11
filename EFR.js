@@ -39,17 +39,17 @@ jQuery.cookie = function (key, value, options) {
 };
 
 /*Made by Karkuta of ZNR, do not remove. */
-var Name = $('div#top_info strong a').val();
+var CookieName = $('#top_info strong a').html();
 var efr = "This will save what you have typed for future posting.";
 $("dl#fast-reply dd textarea").after('<button id="FastSave" style="float:left;" title="'+efr+'">Save Text</button>');
 $("button#btn_preview").after('<button id="FastSave" style="float:left;margin:10px 0 0 10px;" title="'+efr+'">Save Text</button>');
 
 $('button#FastSave').live('click', function(e) {
 e.preventDefault();
-$.cookie(Name, $('dl#fast-reply dd textarea').val(), { expires: 365, path: '/', domain: 'zetaboards.com', secure: false});
+$.cookie(CookieName, $('dl#fast-reply dd textarea').val(), { expires: 365, path: '/', domain: 'zetaboards.com', secure: false});
 
 });
-CheckCookie=$.cookie(Name);
+CheckCookie=$.cookie(CookieName);
 if (CheckCookie!=null && CheckCookie!="")
 {
 var FastEdit = $('dl#fast-reply dd textarea').val();
