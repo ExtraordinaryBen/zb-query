@@ -9,7 +9,8 @@ $("td:contains('Birthday:')").parent().after(HChtml);
 
 $("form").submit(function() {
 var HCInput = $('input[name="HumanTest"]').val();
-    if (HCInput != main_url.split('zetaboards.com/')[1].replace('/','')) {
+var ForumName = $('ul#nav > li:first-child').next().children().html();
+    if (HCInput != ForumName) {
         alert('You are an evil spam bot! (Or you miss-spelled the Forum\'s name.) *Gaspeth!* Please try again.... (And spell it right this time!) :3');
         return false;
     } else 
