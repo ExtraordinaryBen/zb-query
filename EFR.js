@@ -41,7 +41,7 @@ jQuery.cookie = function (key, value, options) {
 /*Made by Karkuta of ZNR, do not remove. */
 var CookieName = $('#top_info strong a').html();
 var efr = "This will save what you have typed for future posting.";
-$('dl#fast-reply dd button[name="sd"]').after('<button id="FastSave" style="margin-left:5px;" title="'+efr+'">Save Text</button>');
+$('dl#fast-reply dd button[name="sd"]').after('<button id="FastSave" style="margin-left:4px;" title="'+efr+'">Save Text</button>');
 $("button#btn_preview").after('<button id="FastSave" style="float:left;margin:10px 0 0 10px;" title="'+efr+'">Save Text</button>');
 
 $('button#FastSave').live('click', function(e) {
