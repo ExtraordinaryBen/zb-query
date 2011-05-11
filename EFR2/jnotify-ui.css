@@ -12,16 +12,16 @@
 
 /* Interaction Cues
 ----------------------------------*/
-.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #fed22f; background: #ffe45c url(http://zb-query.googlecode.com/svn/EFR2/images/ui-bg_highlight-soft_75_ffe45c_1x100.png) 50% top repeat-x; color: #363636; }
+.ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #fed22f; background: #ffe45c url('http://zb-query.googlecode.com/svn/EFR2/images/ui-bg_highlight-soft_75_ffe45c_1x100.png') 50% top repeat-x; color: #363636; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #363636; }
-.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a; background: #b81900 url(http://zb-query.googlecode.com/svn/EFR2/images/ui-bg_diagonals-thick_18_b81900_40x40.png) 50% 50% repeat; color: #ffffff; }
+.ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a; background: #b81900 url('http://zb-query.googlecode.com/svn/EFR2/images/ui-bg_diagonals-thick_18_b81900_40x40.png') 50% 50% repeat; color: #ffffff; }
 
 /* Icons
 ----------------------------------*/
 
 /* states and images */
-.ui-icon { width: 16px; height: 16px; background-image: url(http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_222222_256x240.png); }
-.ui-state-highlight .ui-icon {background-image: url(http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_228ef1_256x240.png); }
+.ui-icon { width: 16px; height: 16px; background-image: url('http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_222222_256x240.png'); }
+.ui-state-highlight .ui-icon {background-image: url('http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_228ef1_256x240.png'); }
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_ffd27a_256x240.png); }
 
 /* positioning */
