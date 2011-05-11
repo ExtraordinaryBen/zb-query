@@ -1,62 +1,19 @@
-/*
-* jQuery UI CSS Framework
-* Copyright (c) 2009 AUTHORS.txt (http://jqueryui.com/about)
-* Dual licensed under the MIT (MIT-LICENSE.txt) and GPL (GPL-LICENSE.txt) licenses.
-*/
-
-/* Icons
-----------------------------------*/
-
-/* states and images */
 .ui-icon { display: block; text-indent: -99999px; overflow: hidden; background-repeat: no-repeat; }
-
-/* Interaction Cues
-----------------------------------*/
 .ui-state-highlight, .ui-widget-content .ui-state-highlight {border: 1px solid #fed22f; background: #ffe45c url('http://zb-query.googlecode.com/svn/EFR2/images/ui-bg_highlight-soft_75_ffe45c_1x100.png') 50% top repeat-x; color: #363636; }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a { color: #363636; }
 .ui-state-error, .ui-widget-content .ui-state-error {border: 1px solid #cd0a0a; background: #b81900 url('http://zb-query.googlecode.com/svn/EFR2/images/ui-bg_diagonals-thick_18_b81900_40x40.png') 50% 50% repeat; color: #ffffff; }
-
-/* Icons
-----------------------------------*/
-
-/* states and images */
 .ui-icon { width: 16px; height: 16px; background-image: url('http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_222222_256x240.png'); }
 .ui-state-highlight .ui-icon {background-image: url('http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_228ef1_256x240.png'); }
-.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(http://zb-query.googlecode.com/svn/EFR2/images/ui-icons_ffd27a_256x240.png); }
-
-/* positioning */
+.ui-state-error .ui-icon, .ui-state-error-text .ui-icon {background-image: url(http:
 .ui-icon-close { background-position: -80px -128px; }
 .ui-icon-alert { background-position: 0 -144px; }
 .ui-icon-info { background-position: -16px -144px; }
 .ui-icon-circle-close { background-position: -32px -192px; }
-
-
-/* Corner radius */
 .ui-corner-top { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; }
 .ui-corner-bottom { -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; }
 .ui-corner-right {  -moz-border-radius-topright: 4px; -webkit-border-top-right-radius: 4px; -moz-border-radius-bottomright: 4px; -webkit-border-bottom-right-radius: 4px; }
 .ui-corner-left { -moz-border-radius-topleft: 4px; -webkit-border-top-left-radius: 4px; -moz-border-radius-bottomleft: 4px; -webkit-border-bottom-left-radius: 4px; }
 .ui-corner-all { -moz-border-radius: 4px; -webkit-border-radius: 4px; }
-
-.jnotify-item
-{
-    height: auto;
-    padding: 4px 4px 4px 4px;
-    margin: 0 0 5px 0;
-    display: block;
-    position: relative;
-}
-
-.jnotify-item-close
-{
-    float: right;
-    margin-left: 2px;
-}
-
-.jnotify-item-wrapper
-{
-    width: 250px;
-    z-index: 9999;
-    margin: auto;
-    text-align: center;
-}
+.jnotify-item { height: auto; padding: 4px 4px 4px 4px; margin: 0 0 5px 0; display: block; position: relative; }
+.jnotify-item-close { float: right; margin-left: 2px; }
+.jnotify-item-wrapper { width: 250px; z-index: 9999; margin: auto; text-align: center; }
