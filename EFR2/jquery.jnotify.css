@@ -1,0 +1,22 @@
+.jnotify-item
+{
+    height: auto;
+    padding: 4px 4px 4px 4px;
+    margin: 0 0 5px 0;
+    display: block;
+    position: relative;
+}
+
+.jnotify-item-close
+{
+    float: right;
+    margin-left: 2px;
+}
+
+.jnotify-item-wrapper
+{
+    width: 250px;
+    z-index: 9999;
+    margin: auto;
+    text-align: center;
+}
