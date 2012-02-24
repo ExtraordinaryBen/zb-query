@@ -11,25 +11,26 @@ $(this).parents(".left").next().prepend("<img class='qedit' src='"+qimg+"' alt='
 });
 $(".qedit").click(function () {
 if(document.getElementById('c_post-text')){
-alert('You are already editing a post!');
-return false;
+	alert('You are already editing a post!');
+	return false;
+} else {
+	ipost =  $(this).parents("tr").prev().prev().children(".c_post");
+	$("div#storage").html($(ipost).html());
+	getposturl = $(this).parent().prev().children("a:first-child").attr("href");
+	$(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;color:#636363;" disabled="disabled" tabindex="3" name="post" rows="20" cols="50">Please wait as the post loads...</textarea>');
+	$("textarea#c_post-text").after(getbuttons);
+	$.get(getposturl, function(data){
+	d = data;
+	var ckshed = $("input[name=show_edit]",d).val();
+	if (ckshed){
+	$("div#editbuttons").append('<input name="show_edit" checked="checked" type="checkbox"/> Show that you edited this post.');
 }
-ipost =  $(this).parents("tr").prev().prev().children(".c_post");
-$("div#storage").html($(ipost).html());
-getposturl = $(this).parent().prev().children("a:first-child").attr("href");
-$(ipost).html('<textarea id="c_post-text" style="background:#D9D9D9;color:#636363;" disabled="disabled" tabindex="3" name="post" rows="20" cols="50">Please wait as the post loads...</textarea>');
-$("textarea#c_post-text").after(getbuttons);
-$.get(getposturl, function(data){
-d = data;
-var ckshed = $("input[name=show_edit]",d).val();
-if (ckshed){
-$("div#editbuttons").append('<input name="show_edit" checked="checked" type="checkbox"/> Show that you edited this post.');
+	$("input[name=sig]").attr("checked", $("input[name=sig]",d).attr("checked"));
+	$("textarea#c_post-text").val($("textarea#c_post-text",data).val()).attr("disabled",false).css('background', '').css('color', '');
+	window.onbeforeunload = function () {
+	return "You currently have a QuickEdit box open. If you continue off the page, your browser will not save your edit."
+	};
 }
-$("input[name=sig]").attr("checked", $("input[name=sig]",d).attr("checked"));
-$("textarea#c_post-text").val($("textarea#c_post-text",data).val()).attr("disabled",false).css('background', '').css('color', '');
-window.onbeforeunload = function () {
-return "You currently have a QuickEdit box open. If you continue off the page, your browser will not save your edit."
-};
 });
 
 });
