@@ -2,7 +2,7 @@
 A collection of jQuery script to add features to ZetaBoards.com forums.
 
 #License
-This script is released under the zlib/libpng license: http://opensource.org/licenses/Zlib
+These scripts are released under the zlib/libpng license: http://opensource.org/licenses/Zlib
 
 Copyright (c) 2011-2015 Ben DeCamp
 
