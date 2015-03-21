@@ -2,7 +2,7 @@
 var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" type="checkbox"/> Include signature with this post.</div>';
 var getposturl, d, postid, ipost, msg, qimg;
 if (!qimg){
-qimg ="http://zb-query.googlecode.com/svn/qedit/q_edit.png";
+qimg ="https://raw.githubusercontent.com/ExtraordinaryBen/zb-query/master/qedit/q_edit.png";
 }
 if (($("#menu_rcp").length)||($("#menu_acp").length)) {
 $("body").append('<div id="storage" style="display:none;"></div>');
