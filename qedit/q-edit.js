@@ -1,8 +1,8 @@
-//Q-Edit v1.1 - By Karkuta. Do not remove this.
+//Q-Edit v1.2 - By Karkuta. Do not remove this.
 var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" type="checkbox"/> Include signature with this post.</div>';
 var getposturl, d, postid, ipost, msg, qimg;
 if (!qimg){
-qimg ="http://zb-query.googlecode.com/svn/qedit/q_edit.png";
+qimg ="https://raw.githubusercontent.com/ExtraordinaryBen/zb-query/master/qedit/q_edit.png";
 }
 
 $("body").append('<div id="storage" style="display:none;"></div>');
