@@ -1,4 +1,12 @@
-//Q-Edit v1.1 Staff Only Edition - By Karkuta. Do not remove this.
+/**
+* Q-Edit v1.2 Staff Edition
+* jQuery script to add a quick edit button for Zetaboard.com forums.
+*
+* Copyright (c) 2011-2015 Ben DeCamp (ben@powerpup.yi.org)
+* Licensed under the GPL licenses:
+* http://www.gnu.org/licenses/gpl.html
+*
+*/
 var getbuttons ='<div id="editbuttons"><button type="button" onclick="Post()">Save Changes</button><button type="button" onclick="restore()">Cancel</button><input name="sig" type="checkbox"/> Include signature with this post.</div>';
 var getposturl, d, postid, ipost, msg, qimg;
 if (!qimg){
